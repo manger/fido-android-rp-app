@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_settings">SETTINGS</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="pref_fido_server">SERVER</string>
+    <string name="pref_server_url">URL</string>
+    <string name="pref_server_port">Port</string>
+    <string name="pref_fido_transaction_authentication">TRANSACTIONS</string>
+    <string name="pref_step_up_transaction_authentication">Step-up authentication</string>
+</resources>

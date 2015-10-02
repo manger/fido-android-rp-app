@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--error strings-->
+    <string name="no_fido_client_found">No FIDO UAF Client was found.</string>
+    <string name="operation_cancelled">The FIDO operation was cancelled.</string>
+    <string name="activity_result_error">Unexpected activity result code: </string>
+    <string name="internal_server_error">Internal Server Error</string>
+
+</resources>

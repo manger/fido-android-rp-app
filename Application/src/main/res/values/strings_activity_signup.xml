@@ -1,0 +1,20 @@
+<resources>
+
+    <!-- Strings related to login -->
+    <string name="title_bar">Sign Up</string>
+    <string name="prompt_first_name">First Name</string>
+    <string name="prompt_last_name">Last Name</string>
+    <string name="prompt_email_signup">Email</string>
+    <string name="prompt_signup_password">Password</string>
+    <string name="prompt_signup_confirm_password">Confirm Password</string>
+    <string name="prompt_register_with_fido">Register with FIDO</string>
+
+    <string name="error_required_first_name">This first name is required</string>
+    <string name="error_required_last_name">This last name is required</string>
+    <string name="error_required_email">This email address is required</string>
+    <string name="error_invalid_email_signup">This email address is invalid</string>
+    <string name="error_required_password">This password is required</string>
+    <string name="error_invalid_password_signup">This password is too short</string>
+    <string name="error_required_confirm_password">This confirm password is required</string>
+    <string name="error_inconsistent_password">This password and the confirmed password are not the same</string>
+</resources>

@@ -1,0 +1,7 @@
+Application/build/
+.gradle
+.idea
+fido-android-rp-app.iml
+local.properties
+SampleRpApp.iml
+build
