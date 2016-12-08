@@ -240,17 +240,15 @@ public class RelyingPartyServerComms implements IRelyingPartyComms {
         return getBaseUrl() + relativeUrl;
     }
 
-    protected String getBaseUrl() {
-        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getContext());
-        String serverUrl = sharedPref.getString(SettingsActivity.PREF_SERVER_URL, "acme.com");
-        if(serverUrl.endsWith("/")) {
-            serverUrl = serverUrl.substring(0, serverUrl.length()-1);
-        }
-        String port = sharedPref.getString(SettingsActivity.PREF_SERVER_PORT, "8443");
+    protected String getBaseUrl() throws MalformedURLException {
+    SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getContext());
+    String serverUrl = sharedPref.getString(SettingsActivity.PREF_SERVER_URL, "acme.com");
+    String port = sharedPref.getString(SettingsActivity.PREF_SERVER_PORT, "8443");
+    String scheme = sharedPref.getBoolean(SettingsActivity.PREF_SERVER_SECURE, false) ? "https" : "http";
 
-        String scheme = sharedPref.getBoolean(SettingsActivity.PREF_SERVER_SECURE, false) ? "https"
-                : "http";
-        return scheme + "://" + serverUrl + ":" + port + "/";
+    URL url = new URL(scheme + "://" + serverUrl);
+
+    return scheme + "://" + url.getHost() + ":" + port + url.getPath() + "/";
     }
 
     protected HttpResponse delete(String relativeUrl, String id, boolean withOutput) {
