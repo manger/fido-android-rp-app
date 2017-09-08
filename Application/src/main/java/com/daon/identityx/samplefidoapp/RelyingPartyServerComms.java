@@ -236,7 +236,7 @@ public class RelyingPartyServerComms implements IRelyingPartyComms {
         }
     }
 
-    protected String getAbsoluteUrl(String relativeUrl) {
+    protected String getAbsoluteUrl(String relativeUrl) throws MalformedURLException {
         return getBaseUrl() + relativeUrl;
     }
 
